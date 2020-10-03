@@ -1,0 +1,23 @@
+{
+  "name": "server_setup",
+  "version": "1.0.0",
+  "description": "Team 6     Gerami, Raman     Liu, Leo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guagualeee/3695-gql-notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guagualeee/3695-gql-notes/issues"
+  },
+  "homepage": "https://github.com/guagualeee/3695-gql-notes#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "graphql": "^15.3.0"
+  }
+}
