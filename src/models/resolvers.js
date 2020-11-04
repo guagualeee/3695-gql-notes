@@ -13,9 +13,13 @@ export const resolvers = {
             return note
         },
         
-        async addImageToNote(_id, imageurl) {
-            const image = await cloudinary.uploader.upload('imageurl', { tags: 'imageurl', public_id: 'imageurl' })
-            return image
-        }
+        addImageToNote: async ({ _id, imageurl }) => {
+            const filter = { id: _id };
+            const update = { imageURL: imageurl };
+            let note = await Note.findOneAndUpdate(filter, update)
+            await note.save()
+            note = await Note.findOne(fileter)
+            return note;
+        },
     }
 }
