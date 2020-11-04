@@ -13,7 +13,7 @@ export const typeDefs = gql`
 
   type Query {
     notes: [Note]
-    notesByAuthor:
+    noteByAuthor(author:String!): [Note]
   }
 
   type Mutation {

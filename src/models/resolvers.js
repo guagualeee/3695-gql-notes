@@ -2,7 +2,8 @@ import { Note } from './Notes.js'
 
 export const resolvers = {
     Query: {
-        notes: () => Note.find()
+        notes: () => Note.find(),
+        noteByAuthor:(_, {author}) => Note.find({author})
     },
 
     Mutation: {
