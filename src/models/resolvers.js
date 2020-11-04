@@ -7,14 +7,14 @@ export const resolvers = {
     },
 
     Mutation: {
-        addNote: async ( _, {author, title, content} ) => {
-            const note = new Note({author, title, content})
+        addNote: async ( _, {author, title, content, imageurl} ) => {
+            const note = new Note({author, title, content, imageurl})
             await note.save()
             return note
         },
         
-        async addImageToNote(parent, args) {
-            const image = await cloudinary.uploader.upload('./images/screenshot1.png', { tags: 'screenshot', public_id: 'screenshot1' })
+        async addImageToNote(_id, imageurl) {
+            const image = await cloudinary.uploader.upload('imageurl', { tags: 'imageurl', public_id: 'imageurl' })
             return image
         }
     }
