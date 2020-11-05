@@ -1,4 +1,4 @@
-import { Note } from './Notes.js'
+import { Note } from './note.js'
 
 export const resolvers = {
     Query: {
