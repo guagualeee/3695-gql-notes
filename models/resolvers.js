@@ -12,14 +12,10 @@ export const resolvers = {
             await note.save()
             return note
         },
-        
-        addImageToNote: async ({ _id, imageurl }) => {
-            const filter = { id: _id };
-            const update = { imageURL: imageurl };
-            let note = await Note.findOneAndUpdate(filter, update)
+        addImageToNote: async ( _, { author, imageurl }) => {
+            let note = await Note.findOneAndUpdate(author, imageurl)
             await note.save()
-            note = await Note.findOne(fileter)
             return note;
-        },
+        }
     }
 }

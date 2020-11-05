@@ -18,7 +18,7 @@ export const typeDefs = gql`
 
   type Mutation {
     addNote(author: String!, title: String!, content: String!): Note!
-    addImageToNote(_id: String!, imageurl: String!): Note!
+    addImageToNote(author: String!, imageurl: String!): Note!
   }
     
 `;
