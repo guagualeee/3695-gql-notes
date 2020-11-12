@@ -8,16 +8,23 @@ export const typeDefs = gql`
     author: String!
     title: String!
     content: String
-    imageurl: String
+    reminder: String
+  }
+
+  type Upcoming{
+    title: String!
+    content: String!
+    reminder: String!
   }
 
   type Query {
     notes: [Note]
     noteByAuthor(author:String!): [Note]
+    upcomings: [Upcoming]
   }
 
   type Mutation {
-    addNote(author: String!, title: String!, content: String!): Note!
+    addNote(author: String!, title: String!, content: String!, reminder:String!): Note!
     addImageToNote(author: String!, imageurl: String!): Note!
   }
     

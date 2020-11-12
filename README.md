@@ -8,6 +8,7 @@ query{
         author
         title
         content
+        reminder
     }
 }
 
@@ -22,12 +23,27 @@ query{
 mutation addNote { 
   addNote(
         author: "liu",
-        title:"query mutation",
-        content: "get it work")
+        title:"ISSP Project",
+        content: "get it done",
+  			reminder: "2020-11-11")
     {
         author
         title
         content
+      	reminder
+    }
+}
+mutation addNote { 
+  addNote(
+        author: "liu",
+        title:"Azure lab",
+        content: "Due 11:30",
+  			reminder: "2020-11-11")
+    {
+        author
+        title
+        content
+      	reminder
     }
 }
 
