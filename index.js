@@ -6,6 +6,8 @@ import corn from 'node-cron'
 import moment from 'moment'
 const { ApolloServer } = apolloServer
 const { cron } = corn
+
+
 // set a scheduled event runs everyday 00:01
 cron.schedule('1 0 * * *', () => {
     let time = moment()
