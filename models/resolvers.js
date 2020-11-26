@@ -11,9 +11,7 @@ export const resolvers = {
         noteByTitle: (_, { title }) => Note.find({ title }),
         noteByTag: (_, { tag }) => Note.find({ tag }),
         noteByDate: (_, { date }) => Note.find({ date }),
-
         /*
-        
         upcomings: async() => {
             let time = moment()
             let allNotes = await Note.find();

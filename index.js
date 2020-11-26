@@ -7,10 +7,6 @@ import moment from 'moment'
 import cloudinary from "cloudinary";
 const { ApolloServer } = apolloServer
 
-// set a scheduled event runs everyday 00:01
-
-const { ApolloServer } = apolloServer
-
 const start = async () => {
 
     await mongoose.connect("mongodb+srv://admin:P@ssw0rd@grahpl-api.blmtu.mongodb.net/graphqlNotes?retryWrites=true&w=majority", {
