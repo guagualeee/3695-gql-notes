@@ -1,23 +1,12 @@
 import { Note } from './note.js'
-<<<<<<< Updated upstream
-=======
 import { Upcoming } from './upcoming.js'
 import cloudinary from "cloudinary";
 
 
->>>>>>> Stashed changes
 
 export const resolvers = {
     Query: {
         notes: () => Note.find(),
-<<<<<<< Updated upstream
-        noteByAuthor:(_, {author}) => Note.find({author})
-    },
-
-    Mutation: {
-        addNote: async ( _, {author, title, content, imageurl} ) => {
-            const note = new Note({author, title, content, imageurl})
-=======
         upcomings: () => Upcoming.find(),
         noteByTitle: (_, { title }) => Note.find({ title }),
         noteByTag: (_, { tag }) => Note.find({ tag }),
@@ -40,7 +29,6 @@ export const resolvers = {
     Mutation: {
         addNote: async ( _, {author, title, content, tag, date, reminder, imageurl} ) => {
             const note = new Note({author, title, content, tag, date, reminder, imageurl})
->>>>>>> Stashed changes
             await note.save()
             return note
         },
