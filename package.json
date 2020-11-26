@@ -20,6 +20,7 @@
   "homepage": "https://github.com/guagualeee/3695-gql-notes#readme",
   "dependencies": {
     "apollo-server": "^2.18.1",
+    "cloudinary": "^1.23.0",
     "express": "^4.17.1",
     "graphql": "^15.0.0",
     "graphql-type-json": "^0.3.2",
