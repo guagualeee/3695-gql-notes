@@ -2,41 +2,28 @@
 Team 6
     Gerami, Raman
     Liu, Leo
+The current graphql api that:
+- can create a note
+- update a note with image
+- read all notes
+- search for notes using: (title, tags and a date)
 
-query{
-    notes{
-        author
-        title
-        content
-    }
-}
+An individual note contain:
+- title
+- id
+- note body(content)
+- tags
+- a date created
+- reminder
+- images
 
-query{
-    noteByAuthor(author:"liu"){
-        author
-        title
-        content
-    }
-}
+Leo Liu was responsible for:
+- create a note
+- update a note with image
+- read all notes
 
-mutation addNote { 
-  addNote(
-        author: "liu",
-        title:"query mutation",
-        content: "get it work")
-    {
-        author
-        title
-        content
-    }
-}
-
-mutation addImageToNote {
-  addImageToNote (
-    author: "liu",
-    imageurl: "https://res.cloudinary.com/acit3695/image/upload/v1604469445/screenshot_1.png"
-  ) {
-    author
-    imageurl
-  }
-}
+Raman Gerami was responsible for:
+- get notes by title
+- get notes by tag
+- get notes by date
+- run scheduled reminder for upcoming notes
