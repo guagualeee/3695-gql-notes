@@ -1,6 +1,6 @@
-import { Note } from './note.js'
-import { Upcoming } from './upcoming.js'
-import cloudinary from "cloudinary";
+const { Note } = require('./note.js')
+const { Upcoming } = require('./upcoming.js')
+const cloudinary = require("cloudinary")
 
 
 

@@ -1,11 +1,10 @@
-import apolloServer from 'apollo-server'
-import mongoose from 'mongoose'
-import { typeDefs } from './models/typeDefs.js'
-import { resolvers } from './models/resolvers.js'
-import cron from 'node-cron'
-import moment from 'moment'
-import cloudinary from "cloudinary";
-const { ApolloServer } = apolloServer
+const ApolloServer = require('apollo-server')
+const mongoose = require('mongoose')
+const { typeDefs } = require('./models/typeDefs.js')
+const { resolvers } = require('./models/resolvers.js')
+const cron = require('node-cron')
+const moment = require('moment')
+const cloudinary = require("cloudinary")
 
 const start = async () => {
 
