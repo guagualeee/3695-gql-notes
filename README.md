@@ -28,7 +28,7 @@ Raman Gerami was responsible for:
 - get notes by date
 - run scheduled reminder for upcoming notes
 
-Example querys:
+## Example querys:
 ```graphql
 query{ 
   notes{ 
@@ -63,7 +63,7 @@ query{
 }
 
 query{ 
-   noteByTag(Tag:"TODO"){ 
+   noteByTag(tag:"TODO"){ 
     author 
     title 
     content 
